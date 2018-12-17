@@ -1,0 +1,8 @@
+
+.homepage-main{
+    background-image: url('../../../img/indo-america.jpg');
+    height: 500px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}

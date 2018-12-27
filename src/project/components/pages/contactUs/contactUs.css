@@ -1,0 +1,19 @@
+.contact-main-con{
+    min-height: 87vh;
+    min-width: 95vw;
+    /* background-image:linear-gradient(to bottom right,navajowhite,lightyellow); */
+}
+.contact-form{
+    width: 40%;
+}
+.map-con{
+    width: 35%;
+}
+.contact-table{
+    width: 63%;
+}
+.map-box{
+    margin: 3%;
+    width: 80%;
+    height: 80%;
+}

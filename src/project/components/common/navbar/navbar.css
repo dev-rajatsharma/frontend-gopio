@@ -1,0 +1,21 @@
+.header-con{
+    background-color: darkslategray;
+}
+.nav-link{
+    color:navajowhite;
+}
+.nav-item:hover{
+    background-color: burlywood;
+}
+.nav-link:hover{
+    color: #f8f9fa;
+}
+.organization-header{
+    width: 43%;
+    color: navajowhite;
+    line-height: 1.5;
+    cursor: pointer;
+}
+.flag-con{
+    width: 12%;
+}

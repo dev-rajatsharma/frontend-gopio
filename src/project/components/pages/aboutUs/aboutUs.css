@@ -1,0 +1,27 @@
+table,tr,th,td{
+    border: 0.1px dotted darkslategray;
+}
+.membership-types{
+    display:  flex;
+    font-size: 0.8rem;
+}
+.about-main-con{
+    min-height:  87vh;
+    min-width:  95vw;
+}
+.memberStat-box{
+    max-width: 22%;
+    /* padding: 0; */
+}
+.fa-black-tie{
+    color: #e74c3c;
+}
+.fa-users{
+    color: #7dbb18;
+}
+.fa-clock-o{
+    color: #00cccc;
+}
+.fa-heart-o{
+    color: #ffcc00;
+}

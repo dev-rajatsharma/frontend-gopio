@@ -1,0 +1,18 @@
+.page-container{
+    /* height: 100vh; */
+    display: flex;
+    
+}
+.body-con{
+    /* position: absolute; */
+    top: 8%;
+    left: 0px;
+    /* background-image:linear-gradient(to bottom right,rgba(255,222,173,0.2),white); */
+    /* background-color: rgba(255,222,173,0.5); */
+}
+.header-backdrop{
+    height:60px;
+}
+.footer-backdrop{
+    /* min-height:100px; */
+}

@@ -3,6 +3,7 @@ import { navigationLinks } from './navbarData';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 import flag from '../../../../img/indian flags/flag4.svg';
+import facebook_logo from '../../../../img/home/facebook_logo.png';
 
 export default class Navbar extends React.Component {
     renderLinks = () => {
@@ -54,7 +55,11 @@ export default class Navbar extends React.Component {
                 {this.renderIndianFlag()}
                 {this.renderOrganizationHeader()}
                 {this.renderNavLinks()}
-
+                <a href='https://www.facebook.com/gopiova/'
+                    className='facebook-con'
+                    target='_blank' rel='noopener noreferrer'>
+                        <img src={facebook_logo} className='img-responsive w-100 h-100' alt='facebook' />
+                </a>
             </header>
         )
     }

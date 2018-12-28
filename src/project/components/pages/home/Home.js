@@ -1,9 +1,10 @@
 import React from 'react';
 import './home.css';
 import banarasEventPic from '../../../../img/activities/banarasEventPic.jpg';
+import march2019 from '../../../../img/events/march2019.jpeg';
 import chairman1 from '../../../../img/home/chairman1_cropped.jpeg';
 import { emailValidation } from '../../../utils';
-import membershipForm from '../../../../img/services/Gopio_Membership_Form.pdf';
+import membershipForm from '../../../../img/home/Gopio_Membership_Form.pdf';
 import logo from '../../../../img/logo2.jpeg';
 import newYear1 from '../../../../img/events/newYear1.jpeg';
 import { Link } from 'react-router-dom';
@@ -25,21 +26,7 @@ export default class Home extends React.Component {
             }
         }, 500)
     }
-    renderUpcomingEvents = () => {
-        return (
-            <React.Fragment>
-                <figure>
-                    <figcaption><i>January 2019</i></figcaption>
-                    <a href='https://pbdindia.gov.in/en' target='_blank' rel='noopener noreferrer'>
-                        <img src={banarasEventPic} className='img-responsive img-thumbnail' alt='Banaras Event 2019' />
-                    </a>
-                </figure>
-                <div className='m-3'>
-                    Another exclusive event coming up in March 2019!
-                </div>
-            </React.Fragment>
-        )
-    }
+    
     renderGopioVirginiaIntro = () => {
         return (
             <section className='w-100'>
@@ -112,14 +99,16 @@ export default class Home extends React.Component {
         return (
             <div className='left-con'>
                 <div className='my-1'>
-                    <Link to='/home'>
+                    {/* <Link to='/home'> */}
                         <img src={logo} className='img-responsive logo-img' alt='GOPIO Logo' onClick={this.handleClickLogo} />
-                    </Link>
+                    {/* </Link> */}
                 </div>
                 <div>
-                    <a href='#' target='_blank' rel='noopener noreferrer'>
+                    {/* <a href='#' target='_blank' rel='noopener noreferrer'> */}
+                    <Link to='/activities'>
                         <img src={newYear1} className='img-responsive img-thumbnail' alt='Text' />
-                    </a>
+                    </Link>
+                    {/* </a> */}
                 </div>
                 <div className='m-3'>
                     GOPIO International Chamber of Commerce (GICC) Is Coming Soon!
@@ -144,7 +133,7 @@ export default class Home extends React.Component {
                 <div className='d-flex'>
                     {this.renderMembershipBox()}
                     {this.renderSubscriptionForm()}
-                    <i className="fa fa-facebook-square fa-4x"></i>
+                    
                 </div>
             </div>
         )
@@ -157,10 +146,32 @@ export default class Home extends React.Component {
             </div>
         )
     }
-
+    renderUpcomingEvents = () => {
+        return (
+            <React.Fragment>
+                <figure>
+                    {/* <figcaption><i>January 2019</i></figcaption> */}
+                    <a href='https://pbdindia.gov.in/en' target='_blank' rel='noopener noreferrer'>
+                        <img src={banarasEventPic} className='img-responsive img-thumbnail' alt='Banaras Event 2019' />
+                    </a>
+                </figure>
+                <figure>
+                    {/* <figcaption><i>January 2019</i></figcaption> */}
+                    {/* <a href='https://pbdindia.gov.in/en' target='_blank' rel='noopener noreferrer'> */}
+                    <Link to='/activities'>
+                        <img src={march2019} className='img-responsive img-thumbnail' alt='march 2019' />
+                    </Link>
+                    {/* </a> */}
+                </figure>
+                {/* <div className='m-3'>
+                    Another exclusive event coming up in March 2019!
+                </div> */}
+            </React.Fragment>
+        )
+    }
     render() {
         return (
-            <main className='shadow d-flex homepage-main-con'>
+            <main className='shadow d-flex m-3 homepage-main-con'>
                 {this.renderLeftColumn()}
                 {this.renderMiddleColumn()}
                 {this.renderRightColumn()}

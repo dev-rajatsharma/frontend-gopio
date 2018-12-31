@@ -36,23 +36,19 @@ export default class AboutUs extends React.Component {
     renderMemberSection=()=>{
         return(
             <section className=''>
-            <div className='py-3'>
-            <h4 className='text-center'>GOPIO Governing Body</h4>
             {this.renderMembersTable()}
-            </div>
-            <div className='my-3 w-100'>
-                <h4 className='text-center my-0'>Member Types</h4>
-                <div className='membership-types'>
-                    {this.renderBoxes()}
-                </div>
-            </div>
+            {this.renderBoxes()}
         </section>
 
         )
     }
     renderBoxes = () => {
         return (
-            memberStats.map((item, index) => {
+            <div className='my-3 w-100'>
+                <h4 className='text-center my-0'>Member Types</h4>
+                <div className='membership-types'>
+                
+            {memberStats.map((item, index) => {
                 let specificColor = colors[index]
                 let borderStyle = {
                     'borderColor': specificColor,
@@ -68,17 +64,16 @@ export default class AboutUs extends React.Component {
                         <div>{item.memberType}</div>
                     </div>
                 )
-            })
+            })}
+            </div>
+            </div>
         )
     }
     renderMembersTable = () => {
         return (
+            <div className='py-3'>
+            <h4 className='text-center'>GOPIO Governing Body</h4>
             <table className='shadow-sm w-100'>
-                {/* <thead>
-                    <tr>
-                        <th className='text-center p-1 ' colSpan={2}>GOPIO Governing Body</th>
-                    </tr>
-                </thead> */}
                 <tbody>
                     {governingMembers.map((item, index) => {
                         let designation = item.designation;
@@ -92,15 +87,18 @@ export default class AboutUs extends React.Component {
                     })}
                 </tbody>
             </table>
+            </div>
         )
     }
     render() {
         return (
             <main className='d-flex w-100 h-100 about-main-con'>
-                {/* <div className='d-flex'> */}
                 {this.renderVisionMission()}
-                {this.renderMemberSection()}    
-                {/* </div> */}
+                <section className=''>
+                    {this.renderMembersTable()}
+                    {/* DO NOT DELETE THE LINE BELOW, IT WILL BE ACTIVATED LATER */}
+                    {/* {this.renderBoxes()} */} 
+                </section>
             </main>
         )
     }

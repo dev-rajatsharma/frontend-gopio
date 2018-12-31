@@ -29,7 +29,6 @@ export default class Sponsers extends React.Component {
                                     )
                                 })}
                             </ul>
-
                         </div>
                     )
                 })}
@@ -39,8 +38,8 @@ export default class Sponsers extends React.Component {
     
     render() {
         return (
-            <main className='shadow servicies-main-con'>
-            <i className="fa fa-dollar-sign fa-5x"></i>
+            <main className='d-flex  flex-column w-100 h-100 servicies-main-con'>
+                <i className="fa fa-dollar-sign fa-5x"></i>
                 {this.renderSponserBenefits()}
             </main>
         )

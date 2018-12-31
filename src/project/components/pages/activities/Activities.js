@@ -74,7 +74,7 @@ export default class Activities extends React.Component {
     }
     render() {
         return (
-            <main className='shadow activities-main-con'>
+            <main className='d-flex flex-column w-100 h-100 activities-main-con'>
                 {/* <div
                     className="fb-page"
                     data-href="https://www.facebook.com/gopiova/"
@@ -91,7 +91,7 @@ export default class Activities extends React.Component {
                 {/* <a href='https://pbdindia.gov.in/en' target='_blank'>
                     <img src={banarasEventPic} alt='Banaras Event 2019' />
                 </a> */}
-                <div className='d-flex my-3'>
+                <div className='d-flex'>
                     {this.renderCollaboratePic()}
                     {this.renderWorkWithUs()}
                 </div>

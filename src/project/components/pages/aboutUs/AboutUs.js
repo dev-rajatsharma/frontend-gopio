@@ -81,10 +81,12 @@ export default class AboutUs extends React.Component {
                 </thead> */}
                 <tbody>
                     {governingMembers.map((item, index) => {
+                        let designation = item.designation;
+                        let name = (typeof item.name === 'string')? item.name: item.name.join();
                         return (
                             <tr>
-                                <th className='p-2'>{item.designation}</th>
-                                <td className='p-2'>{item.name}</td>
+                                <th className='p-2'>{designation}</th>
+                                <td className='p-2'>{name}</td>
                             </tr>
                         )
                     })}
@@ -94,11 +96,11 @@ export default class AboutUs extends React.Component {
     }
     render() {
         return (
-            <main className='container shadow about-main-con'>
-                <div className='d-flex'>
+            <main className='d-flex w-100 h-100 about-main-con'>
+                {/* <div className='d-flex'> */}
                 {this.renderVisionMission()}
                 {this.renderMemberSection()}    
-                </div>
+                {/* </div> */}
             </main>
         )
     }

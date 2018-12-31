@@ -6,8 +6,8 @@ table,tr,th,td{
     font-size: 0.8rem;
 }
 .about-main-con{
-    min-height:  87vh;
-    min-width:  95vw;
+    /* min-height:  87vh; */
+    /* min-width:  95vw; */
 }
 .memberStat-box{
     max-width: 22%;

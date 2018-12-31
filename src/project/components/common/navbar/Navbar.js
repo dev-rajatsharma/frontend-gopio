@@ -3,9 +3,33 @@ import { navigationLinks } from './navbarData';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 import flag from '../../../../img/indian flags/flag4.svg';
+import orgPic from '../../../../img/home/orgPic.jpeg';
 import facebook_logo from '../../../../img/home/facebook_logo.png';
 
 export default class Navbar extends React.Component {
+    renderIndianFlag=()=>{
+        return(
+            <figure className='my-1 mx-4 flag-con'>
+                <img src={flag} className='img-responsive w-100 h-100' alt='flag'/>
+            </figure>
+        )
+    }
+    renderOrganizationHeader = () => {
+        return (
+            <span className='org-title-con text-center'>
+                <Link className="navbar-text text-center organization-header" to='/home'>
+                    GOPIO - Virginia
+                </Link>
+            </span>
+        )
+    }
+    renderOrganizationPic=()=>{
+        return(
+            <figure className='org-pic-con'>
+                <img src={orgPic} className='img-responsive w-100 h-100' alt='gopio board'/>
+            </figure>
+        )
+    }
     renderLinks = () => {
         return (
             <React.Fragment>
@@ -22,45 +46,37 @@ export default class Navbar extends React.Component {
     handleClickLogo = () => {
         // this.props.history.loca
     }
-    renderIndianFlag=()=>{
-        return(
-            <figure className='m-1 flag-con'>
-                <img src={flag} className='img-responsive w-100 h-100' alt='flag'/>
-            </figure>
-        )
-    }
-    renderOrganizationHeader = () => {
-        return (
-            <h2 className='text-center organization-header'
-            onClick={()=> window.location.href = '/home'
-                // this.props.history.push('/home')
-            }
-            >
-                GOPIO - Virginia</h2>
-        )
-    }
-    renderNavLinks = () => {
-        return (
-            <nav className='navbar navbar-expand-sm justify-content-end'>
-                <ul className='navbar-nav'>
-                    {this.renderLinks()}
-                </ul>
-            </nav>
-        )
-    }
-
+    
+    
     render() {
         return (
-            <header className='fixed-top d-flex header-con'>
+            <nav className='navbar navbar-expand-sm fixed-top navbar-con'>
                 {this.renderIndianFlag()}
                 {this.renderOrganizationHeader()}
-                {this.renderNavLinks()}
-                <a href='https://www.facebook.com/gopiova/'
-                    className='facebook-con'
-                    target='_blank' rel='noopener noreferrer'>
-                        <img src={facebook_logo} className='img-responsive w-100 h-100' alt='facebook' />
-                </a>
-            </header>
+                {/* {this.renderOrganizationPic()} */}
+
+                <button type="button" class="navbar-toggler"
+                        data-toggle="collapse" 
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse nav-links-con" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        {this.renderLinks()}
+                        <li className='nav-item facebook-con'>
+                            <a href='https://www.facebook.com/gopiova/'
+                                className=''
+                                target='_blank' rel='noopener noreferrer'>
+                                    <img src={facebook_logo} className='img-responsive w-100 h-100' alt='facebook' />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         )
     }
 }

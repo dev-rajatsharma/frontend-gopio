@@ -21,23 +21,25 @@ const ContactUsWithrouter = withRouter(ContactUs);
 export default class MainComponent extends React.Component {
     render() {
         return (
-            <main className='container-fluid page-container'>
+            <div className='container-fluid d-flex flex-column'>
                 <Header />
-                <section className='container-fluid body-con'>
+                <div className='container-fluid'>
                     <div className='header-backdrop'>header backdrop</div>
-                    <Switch>
-                        <Route exact path='/' render={() => <Redirect to='/home' />} />
-                        <Route exact path='/home' render={() => <HomeWithRouter />} />
-                        <Route exact path='/about' render={() => <AboutUsWithRouter />} />
-                        <Route exact path='/sponsers' render={() => <SponsersWithRouter />} />
-                        <Route exact path='/activities' render={() => <ActivitiesWithRouter />} />
-                        <Route exact path='/gallery' render={() => <GalleryWithRouter />} />
-                        <Route exact path='/contact' render={() => <ContactUsWithrouter />} />
-                    </Switch>
+                    <main className='shadow-sm main-con'>
+                        <Switch>
+                            <Route exact path='/' render={() => <Redirect to='/home' />} />
+                            <Route exact path='/home' render={() => <HomeWithRouter />} />
+                            <Route exact path='/about' render={() => <AboutUsWithRouter />} />
+                            <Route exact path='/sponsers' render={() => <SponsersWithRouter />} />
+                            <Route exact path='/activities' render={() => <ActivitiesWithRouter />} />
+                            <Route exact path='/gallery' render={() => <GalleryWithRouter />} />
+                            <Route exact path='/contact' render={() => <ContactUsWithrouter />} />
+                        </Switch>
+                    </main>
                     <div className='footer-backdrop'>footer backdrop</div>
-                </section>
+                </div>
                 <Footer />
-            </main>
+            </div>
         )
     }
 }

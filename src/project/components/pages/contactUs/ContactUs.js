@@ -78,7 +78,7 @@ export default class ContactUs extends React.Component {
     }
     render() {
         return (
-            <main className='shadow contact-main-con'>
+            <main className='d-flex  flex-column w-100 h-100 contact-main-con'>
                 <div className='d-flex'>
                     <div className='p-4 contact-table'>
                         <h4> Contact Details</h4>

@@ -10,17 +10,34 @@
 .nav-link:hover{
     color: #f8f9fa;
 }
+.org-title-con{
+    min-width: 10%;
+    width: 50%;
+}
 .organization-header{
-    width: 43%;
+    /* width: 43%; */
     color: navajowhite;
     line-height: 1.5;
-    cursor: pointer;
+    font-weight: 700;
+    /* cursor: pointer; */
+}
+.organization-header:hover{
+    color: black;
+    text-decoration: none;
 }
 .flag-con{
-    width: 12%;
+    width: 3rem;
 }
 .facebook-con{
-    width: 2.5%;
-    height: 60%;
-    margin-top : 1%;
+    width: 2rem;
+    height: 2rem;
+    /* margin-top : 1%; */
+}
+.navbar-con{
+    padding:  0;
+    background-color: darkslategray;
+    color: navajowhite;
+}
+.nav-links-con{
+    max-width: 40%
 }

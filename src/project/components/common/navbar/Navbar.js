@@ -16,7 +16,7 @@ export default class Navbar extends React.Component {
     }
     renderOrganizationHeader = () => {
         return (
-            <span className='org-title-con text-center'>
+            <span className='text-center org-title-con'>
                 <Link className="navbar-text text-center organization-header" to='/home'>
                     GOPIO - Virginia
                 </Link>

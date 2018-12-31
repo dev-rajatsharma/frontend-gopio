@@ -80,9 +80,9 @@ export default class Home extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault();
         let email = this.state.email;
-        // if(emailValidation(email)){
-            window.location.reload();
-        // }
+        if(emailValidation(email)){
+            this.setState({email: ''})
+        }
     }
     renderMembershipBox = () => {
         return (
@@ -116,9 +116,9 @@ export default class Home extends React.Component {
                         <img src={newYear1} className='img-responsive img-thumbnail' alt='Text' onClick={this.openPoster}/>
                     {/* </Link> */}
                     {/* </a> */}
-                    <div className='my-2'>
+                    {/* <div className='my-2'>
                     <img src={newYear2} className='img-responsive img-thumbnail' alt='Text' onClick={this.openPoster}/>
-                    </div>
+                    </div> */}
                 </div>
                 
             </div>

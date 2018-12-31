@@ -13,6 +13,7 @@
 .org-title-con{
     min-width: 10%;
     width: 50%;
+    font-size: larger;
 }
 .organization-header{
     /* width: 43%; */

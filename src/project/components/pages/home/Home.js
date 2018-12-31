@@ -1,12 +1,13 @@
 import React from 'react';
 import './home.css';
 import banarasEventPic from '../../../../img/activities/banarasEventPic.jpg';
-import march2019 from '../../../../img/events/march2019.jpeg';
 import chairman1 from '../../../../img/home/chairman1_cropped.jpeg';
 import { emailValidation } from '../../../utils';
 import membershipForm from '../../../../img/home/Gopio_Membership_Form.pdf';
 import logo from '../../../../img/logo2.jpeg';
 import newYear1 from '../../../../img/events/newYear1.jpeg';
+import newYear2 from '../../../../img/home/newyear2.jpeg';
+import march2019 from '../../../../img/home/marchevent2.jpeg';
 import { Link } from 'react-router-dom';
 
 export default class Home extends React.Component {
@@ -109,12 +110,15 @@ export default class Home extends React.Component {
                         <img src={logo} className='img-responsive logo-img' alt='GOPIO Logo' onClick={this.handleClickLogo} />
                     {/* </Link> */}
                 </div>
-                <div>
+                <div className='my-2'>
                     {/* <a href='#' target='_blank' rel='noopener noreferrer'> */}
                     {/* <Link to='/activities'> */}
                         <img src={newYear1} className='img-responsive img-thumbnail' alt='Text' onClick={this.openPoster}/>
                     {/* </Link> */}
                     {/* </a> */}
+                    <div className='my-2'>
+                    <img src={newYear2} className='img-responsive img-thumbnail' alt='Text' onClick={this.openPoster}/>
+                    </div>
                 </div>
                 
             </div>

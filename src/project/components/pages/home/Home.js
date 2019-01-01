@@ -145,17 +145,33 @@ export default class Home extends React.Component {
         return (
             <div className='right-con'>
                 <h5 className='text-center' style={{ 'color': this.state.eventsHeading }}> Upcoming Events! </h5>
-                <figure>
+                <div className='my-3'>
+                <figure className='m-0'>
                     <a href='https://pbdindia.gov.in/en' target='_blank' rel='noopener noreferrer'>
                         <img src={banarasEventPic} className='img-responsive img-thumbnail' alt='Banaras Event 2019' />
                     </a>
                 </figure>
-                <figure>
+                {/* <small>Pravasiya Bhartiya Diwas</small> */}
+
+                </div>
+                <div className='my-3'>
+                <figure className='m-0'>
                     {/* <Link to='/activities'> */}
                         <img src={march2019} className='img-responsive img-thumbnail' alt='march 2019' onClick={this.openPoster}/>
                     {/* </Link> */}
                 </figure>
-                <div className='m-3'>
+                        <small>College scholarship for brilliant students</small>
+                </div>
+                <div className='border my-3 p-1'>
+                <h6>10th Annual Award Gala Function</h6>
+                <p>
+                    For more details, click 
+                    <button type='button' className='btn btn-info' onClick={()=>this.props.history.push('/activities')}>
+                         here
+                    </button>
+                </p> 
+                </div>
+                <div className='border my-3 p-1'>
                     GOPIO International Chamber of Commerce (GICC) Is Coming Soon!
                 </div>
             </div>

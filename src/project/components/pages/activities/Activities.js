@@ -42,6 +42,22 @@ export default class Activities extends React.Component {
             </ul>
         )
     }
+    renderGalaEvent=()=>{
+        return(
+            <div className='border p-2'>
+            <h4 className='text-danger'>10th Annual Award Gala Function</h4>
+            <h6>Second largest event</h6>                 
+                We are inviting nominations in the following categories :-
+                <ol>
+                    <li>Community Service</li>
+                    <li>Journalism</li>
+                    <li>Science & Technology</li>
+                    <li>Medicine</li>
+                </ol>
+                <p>More details coming soon!</p>
+            </div>
+        )
+    }
     renderBoxes = () => {
         return (
             boxes.map((item, index) => {
@@ -94,6 +110,7 @@ export default class Activities extends React.Component {
                 <div className='d-flex'>
                     {this.renderCollaboratePic()}
                     {this.renderWorkWithUs()}
+                    {this.renderGalaEvent()}
                 </div>
                 {this.renderActivityBoxes()}
             </main>

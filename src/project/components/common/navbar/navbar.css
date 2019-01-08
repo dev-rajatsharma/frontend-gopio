@@ -1,29 +1,43 @@
 .header-con{
-    background-color: darkslategray;
+    /* background-color: #cec39d; */
+}
+.navbar-con{
+    padding:  0;
+    /* background-color: #0f1e3e; */
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+.nav-links-con{
+    max-width: 40%
 }
 .nav-link{
-    color:navajowhite;
+    /* color: #F8FCE1; */
+    color: #fff;
 }
 .nav-item:hover{
-    background-color: burlywood;
+    /* background-color: burlywood; */
 }
 .nav-link:hover{
+    /* font-weight: bold; */
+    /* font-size: large; */
     color: #f8f9fa;
 }
 .org-title-con{
     min-width: 10%;
     width: 50%;
-    font-size: larger;
+    /* font-size: larger; */
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
 }
 .organization-header{
     /* width: 43%; */
-    color: navajowhite;
+    /* color: #F8FCE1; */
+    color: #fff;
     line-height: 1.5;
     font-weight: 700;
     /* cursor: pointer; */
 }
 .organization-header:hover{
-    color: black;
+    color: #F8FCE1;
     text-decoration: none;
 }
 .flag-con{
@@ -32,13 +46,5 @@
 .facebook-con{
     width: 2rem;
     height: 2rem;
-    /* margin-top : 1%; */
-}
-.navbar-con{
-    padding:  0;
-    background-color: darkslategray;
-    color: navajowhite;
-}
-.nav-links-con{
-    max-width: 40%
+    margin-top : 0.3rem;
 }

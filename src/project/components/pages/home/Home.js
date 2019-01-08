@@ -9,6 +9,7 @@ import newYear1 from '../../../../img/events/newYear1.jpeg';
 import newYear2 from '../../../../img/home/newyear2.jpeg';
 import march2019 from '../../../../img/home/marchevent2.jpeg';
 import { Link } from 'react-router-dom';
+import nancyPelosi1 from '../../../../img/home/nancyPelosi1.jpeg';
 
 export default class Home extends React.Component {
     constructor(props) {
@@ -67,7 +68,7 @@ export default class Home extends React.Component {
                         value={this.state.email} required
                         onChange={this.handleChangeEmail} />
                 </div>
-                <input type='submit' className='form-control btn btn-sm btn-info' value='Subscribe' />
+                <input type='submit' className='form-control btn btn-sm btn-general' value='Subscribe' />
             </form>
         )
     }
@@ -91,7 +92,7 @@ export default class Home extends React.Component {
                 <div>
                     To become Member of GOPIO Virginia - Download, complete the form and send to the address given in the form along with membership dues.
                     </div>
-                <button type='button' className='btn btn-sm btn-info' onClick={this.handleClickMembership}>Download membership form!</button>
+                <button type='button' className='btn btn-sm btn-general' onClick={this.handleClickMembership}>Download membership form!</button>
             </div>
         )
     }
@@ -106,21 +107,21 @@ export default class Home extends React.Component {
         return (
             <div className='left-con'>
                 <div className='my-1'>
-                    {/* <Link to='/home'> */}
-                        <img src={logo} className='img-responsive logo-img' alt='GOPIO Logo' onClick={this.handleClickLogo} />
-                    {/* </Link> */}
+                    <img src={logo} className='img-responsive logo-img' alt='GOPIO Logo' onClick={this.handleClickLogo} />
                 </div>
                 <div className='my-2'>
-                    {/* <a href='#' target='_blank' rel='noopener noreferrer'> */}
-                    {/* <Link to='/activities'> */}
-                        <img src={newYear1} className='img-responsive img-thumbnail' alt='Text' onClick={this.openPoster}/>
-                    {/* </Link> */}
-                    {/* </a> */}
-                    {/* <div className='my-2'>
-                    <img src={newYear2} className='img-responsive img-thumbnail' alt='Text' onClick={this.openPoster}/>
-                    </div> */}
+                    <img src={newYear1} className='img-responsive img-thumbnail' alt='newyear' onClick={this.openPoster}/>
+                </div>
+                <div className='my-2'>
+                    <figure className='m-0'>
+                        <img src={nancyPelosi1} className='img-responsive img-thumbnail' alt='Text' onClick={this.openPoster}/>
+                    </figure>
+                    <small>Parliament Speaker Nancy Pelosi</small>
                 </div>
                 
+                <div className='border my-3 p-1'>
+                    GOPIO International Chamber of Commerce (GICC) Is Coming Soon!
+                </div>
             </div>
         )
     }
@@ -155,24 +156,19 @@ export default class Home extends React.Component {
 
                 </div>
                 <div className='my-3'>
-                <figure className='m-0'>
-                    {/* <Link to='/activities'> */}
+                    <figure className='m-0'>
                         <img src={march2019} className='img-responsive img-thumbnail' alt='march 2019' onClick={this.openPoster}/>
-                    {/* </Link> */}
-                </figure>
-                        <small>College scholarship for brilliant students</small>
+                    </figure>
+                    <small>College scholarship for brilliant students</small>
                 </div>
                 <div className='border my-3 p-1'>
                 <h6>10th Annual Award Gala Function</h6>
                 <p>
                     For more details, click 
-                    <button type='button' className='btn btn-info' onClick={()=>this.props.history.push('/activities')}>
+                    <button type='button' className='btn btn-general' onClick={()=>this.props.history.push('/activities')}>
                          here
                     </button>
                 </p> 
-                </div>
-                <div className='border my-3 p-1'>
-                    GOPIO International Chamber of Commerce (GICC) Is Coming Soon!
                 </div>
             </div>
         )

@@ -60,7 +60,7 @@ export default class ContactUs extends React.Component {
                     <div className='form-group'>
                         <textarea type='text' className='form-control' value={this.state.message} name='message' placeholder='Enter Message' onChange={this.handleChange}/>
                     </div>
-                    <input type='submit' className='btn btn-info' value='Send Message' />
+                    <input type='submit' className='btn btn-general' value='Send Message' />
                 </form>
             </section>
         )

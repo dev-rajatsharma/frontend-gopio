@@ -46,3 +46,7 @@
     color:  #5f7d95;
     padding-top: 2% ;
 }
+.btn-social{
+    margin: 0.3rem;
+    cursor: pointer;
+}

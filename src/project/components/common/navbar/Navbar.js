@@ -4,7 +4,10 @@ import { Link,NavLink } from 'react-router-dom';
 import './navbar.css';
 import flag from '../../../../img/indian flags/flag4.svg';
 import orgPic from '../../../../img/home/orgPic.jpeg';
-import facebook_logo from '../../../../img/home/facebook_logo.png';
+// import facebook_logo from '../../../../img/home/facebook_logo.png';
+// import { FacebookIcon } from 'react-share';
+import {renderFaceBookPage} from '../../../utils';
+    
 
 export default class Navbar extends React.Component {
     renderIndianFlag=()=>{
@@ -53,6 +56,18 @@ export default class Navbar extends React.Component {
     handleClickLogo = () => {
         // this.props.history.loca
     }
+    // renderFaceBookPage=()=>{
+    //     return(
+    //         <div className='facebook-con' title='Connect on facebook'>
+    //             <a href='https://www.facebook.com/gopiova/'
+    //                 className=''
+    //                 target='_blank' rel='noopener noreferrer'>
+    //                 <FacebookIcon size={32} round={true} />
+    //                     {/* <img src={facebook_logo} className='img-responsive rounded-circle w-100 h-100' alt='facebook' /> */}
+    //             </a>
+    //         </div>
+    //     )
+    // }
     
     
     render() {
@@ -80,12 +95,8 @@ export default class Navbar extends React.Component {
                 {/* <-- Links --> */}
                     <ul class="navbar-nav">
                         {this.renderLinks()}
-                        <li className='nav-item facebook-con' title='Connect on facebook'>
-                            <a href='https://www.facebook.com/gopiova/'
-                                className=''
-                                target='_blank' rel='noopener noreferrer'>
-                                    <img src={facebook_logo} className='img-responsive rounded-circle w-100 h-100' alt='facebook' />
-                            </a>
+                        <li className='nav-item'>
+                            {renderFaceBookPage()}
                         </li>
                     </ul>
                     {/* <-- /. Links --> */}

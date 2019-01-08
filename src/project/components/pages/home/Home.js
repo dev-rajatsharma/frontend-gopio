@@ -10,6 +10,18 @@ import newYear2 from '../../../../img/home/newyear2.jpeg';
 import march2019 from '../../../../img/home/marchevent2.jpeg';
 import { Link } from 'react-router-dom';
 import nancyPelosi1 from '../../../../img/home/nancyPelosi1.jpeg';
+import {
+    FacebookShareButton,
+    TwitterShareButton,
+    GooglePlusShareButton,
+    LinkedinShareButton,
+    WhatsappShareButton} from 'react-share';
+import {
+    FacebookIcon,
+    TwitterIcon,
+    WhatsappIcon,
+    GooglePlusIcon,
+    LinkedinIcon} from 'react-share';
 
 export default class Home extends React.Component {
     constructor(props) {
@@ -103,6 +115,32 @@ export default class Home extends React.Component {
         console.log(e.target.src)
         window.open(e.target.src)
     }
+    getSocialIcons=()=>{
+        let localURL = '#';
+        return (
+            <div className='my-3'>
+                <h4>Get Social</h4>
+                <div className='d-flex'>
+                    <FacebookShareButton url={`http://www.facebook.com/sharer.php?u=${localURL}`} className='btn-social'>
+                        <FacebookIcon size={32} round={true} />
+                    </FacebookShareButton>
+                    <TwitterShareButton url={`http://www.twitter.com/intent/tweet?url=${localURL}`} className='btn-social'>
+                        <TwitterIcon size={32} round={true} />
+                    </TwitterShareButton>
+                    <GooglePlusShareButton url={`https://plus.google.com/share?url=${localURL}`} className='btn-social'>
+                        <GooglePlusIcon size={32} round={true} />
+                    </GooglePlusShareButton>
+                    <LinkedinShareButton url={`https://www.linkedin.com/shareArticle?mini=true&url=${localURL}`} className='btn-social'>
+                        <LinkedinIcon size={32} round={true} />
+                    </LinkedinShareButton>
+                    <WhatsappShareButton url={`whatsapp://send?text=${localURL}`} className='btn-social'>
+                        <WhatsappIcon size={32} round={true} />
+                    </WhatsappShareButton>
+                </div>
+            </div>
+
+        )
+    }
     renderLeftColumn = () => {
         return (
             <div className='left-con'>
@@ -139,7 +177,7 @@ export default class Home extends React.Component {
                     {this.renderMembershipBox()}
                     {this.renderSubscriptionForm()}
                 </div>
-                
+                {this.getSocialIcons()}
             </div>
         )
     }

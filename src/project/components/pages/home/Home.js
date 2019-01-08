@@ -68,7 +68,7 @@ export default class Home extends React.Component {
                         value={this.state.email} required
                         onChange={this.handleChangeEmail} />
                 </div>
-                <input type='submit' className='form-control btn btn-sm btn-general' value='Subscribe' />
+                <input type='submit' className='form-control btn btn-sm btn-info' value='Subscribe' />
             </form>
         )
     }
@@ -92,7 +92,7 @@ export default class Home extends React.Component {
                 <div>
                     To become Member of GOPIO Virginia - Download, complete the form and send to the address given in the form along with membership dues.
                     </div>
-                <button type='button' className='btn btn-sm btn-general' onClick={this.handleClickMembership}>Download membership form!</button>
+                <button type='button' className='btn btn-sm btn-info' onClick={this.handleClickMembership}>Download membership form!</button>
             </div>
         )
     }
@@ -139,6 +139,7 @@ export default class Home extends React.Component {
                     {this.renderMembershipBox()}
                     {this.renderSubscriptionForm()}
                 </div>
+                
             </div>
         )
     }
@@ -165,7 +166,7 @@ export default class Home extends React.Component {
                 <h6>10th Annual Award Gala Function</h6>
                 <p>
                     For more details, click 
-                    <button type='button' className='btn btn-general' onClick={()=>this.props.history.push('/activities')}>
+                    <button type='button' className='btn btn-info' onClick={()=>this.props.history.push('/activities')}>
                          here
                     </button>
                 </p> 

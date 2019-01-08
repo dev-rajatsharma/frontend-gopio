@@ -16,7 +16,7 @@ export const navigationLinks = [
         href: '/sponsers'
     },
     {
-        text: 'Photo Gallery',
+        text: 'Gallery',
         href: '/gallery'
     },
     {

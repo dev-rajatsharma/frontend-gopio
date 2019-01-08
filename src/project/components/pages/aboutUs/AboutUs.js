@@ -73,7 +73,7 @@ export default class AboutUs extends React.Component {
         return (
             <div className='py-3'>
             <h4 className='text-center'>GOPIO Governing Body</h4>
-            <table className='shadow-sm w-100'>
+            <table className='table table-hover shadow-sm w-100'>
                 <tbody>
                     {governingMembers.map((item, index) => {
                         let designation = item.designation;

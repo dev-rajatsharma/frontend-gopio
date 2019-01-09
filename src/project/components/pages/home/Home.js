@@ -9,7 +9,7 @@ import newYear1 from '../../../../img/events/newYear1.jpeg';
 import newYear2 from '../../../../img/home/newyear2.jpeg';
 import march2019 from '../../../../img/home/marchevent2.jpeg';
 import { Link } from 'react-router-dom';
-import nancyPelosi1 from '../../../../img/home/nancyPelosi1.jpeg';
+// import nancyPelosi1 from '../../../../img/home/nancyPelosi1.jpeg';
 import Corousel from '../../common/corousel/Corousel';
 import {
     FacebookShareButton,

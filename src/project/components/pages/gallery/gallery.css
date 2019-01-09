@@ -32,7 +32,6 @@
       max-width: 100%;
     }
   }
-  .gallery-main-con{
-    /* min-height: 87vh; */
-    /* min-width: 95vh; */
+  .gallery-fig-con{
+    max-width: 50%;
   }

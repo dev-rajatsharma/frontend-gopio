@@ -22,6 +22,8 @@ import pic20 from '../../../../img/gallery/20.jpg';
 import pic21 from '../../../../img/gallery/21.jpg';
 import pic22 from '../../../../img/gallery/22.jpg';
 import pic23 from '../../../../img/gallery/23.jpg';
+import pic24 from '../../../../img/gallery/jagat_shah.jpeg';
+import pic25 from '../../../../img/gallery/June2018Event_with Jagat Shah.jpeg';
 
 import './gallery.css';
  let pics = [
@@ -117,15 +119,27 @@ import './gallery.css';
         src: pic23,
         caption: ''
     },
+    {
+        src: pic24,
+        caption: ''
+    },
+    {
+        src: pic25,
+        caption: ''
+    },
     
  ]
 
 export default class gallery extends React.Component {
+    openPoster=(e)=>{
+        console.log(e.target.src)
+        window.open(e.target.src)
+    }
     renderPics=()=>{
         return pics.map((item,index)=>{
             return (
-                <figure className='border m-0'>
-                    <img src={item.src} className='img img-thumbnail img-responsive' alt='pic' />
+                <figure className='border m-0 gallery-fig-con'>
+                    <img src={item.src} className='img img-thumbnail img-responsive' alt='pic' onClick={this.openPoster}/>
                     <div className='text-center'>
                         <small>{item.caption}</small>
                     </div>

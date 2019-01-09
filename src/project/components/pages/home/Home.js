@@ -10,6 +10,7 @@ import newYear2 from '../../../../img/home/newyear2.jpeg';
 import march2019 from '../../../../img/home/marchevent2.jpeg';
 import { Link } from 'react-router-dom';
 import nancyPelosi1 from '../../../../img/home/nancyPelosi1.jpeg';
+import Corousel from '../../common/corousel/Corousel';
 import {
     FacebookShareButton,
     TwitterShareButton,
@@ -150,12 +151,12 @@ export default class Home extends React.Component {
                 <div className='my-2'>
                     <img src={newYear1} className='img-responsive img-thumbnail' alt='newyear' onClick={this.openPoster}/>
                 </div>
-                <div className='my-2'>
+                {/* <div className='my-2'>
                     <figure className='m-0'>
                         <img src={nancyPelosi1} className='img-responsive img-thumbnail' alt='Text' onClick={this.openPoster}/>
                     </figure>
                     <small>Parliament Speaker Nancy Pelosi</small>
-                </div>
+                </div> */}
                 
                 <div className='border my-3 p-1'>
                     GOPIO International Chamber of Commerce (GICC) Is Coming Soon!
@@ -166,6 +167,7 @@ export default class Home extends React.Component {
     renderMiddleColumn = () => {
         return (
             <div className='m-3 middle-con'>
+                <Corousel />
                 <div className='d-flex'>
                     {this.renderGopioVirginiaIntro()}
                     {this.renderChairmanPic()}

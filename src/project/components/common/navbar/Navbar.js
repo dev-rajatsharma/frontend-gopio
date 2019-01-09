@@ -3,18 +3,23 @@ import { navigationLinks } from './navbarData';
 import { Link,NavLink } from 'react-router-dom';
 import './navbar.css';
 import flag from '../../../../img/indian flags/flag4.svg';
-import orgPic from '../../../../img/home/orgPic.jpeg';
+import USflag from '../../../../img/home/USflag.png';
 // import facebook_logo from '../../../../img/home/facebook_logo.png';
 // import { FacebookIcon } from 'react-share';
 import {renderFaceBookPage} from '../../../utils';
     
 
 export default class Navbar extends React.Component {
-    renderIndianFlag=()=>{
+    renderFlags=()=>{
         return(
-            <figure className='my-1 mx-4 flag-con'>
+            <div className='d-flex'>
+            <figure className='my-1 mx-3 flag-con'>
                 <img src={flag} className='img-responsive w-100 h-100' alt='flag'/>
             </figure>
+            <figure className='my-1 mx-1 flag-con'>
+                <img src={USflag} className='img-responsive w-100 h-100' alt='flag'/>
+            </figure>
+            </div>
         )
     }
     renderOrganizationHeader = () => {
@@ -26,20 +31,20 @@ export default class Navbar extends React.Component {
             </span>
         )
     }
-    renderOrganizationPic=()=>{
-        return(
-            <figure className='org-pic-con'>
-                <img src={orgPic} className='img-responsive w-100 h-100' alt='gopio board'/>
-            </figure>
-        )
-    }
+    // renderOrganizationPic=()=>{
+    //     return(
+    //         <figure className='org-pic-con'>
+    //             <img src={} className='img-responsive w-100 h-100' alt='gopio board'/>
+    //         </figure>
+    //     )
+    // }
     renderLinks = () => {
         return (
             <React.Fragment>
                 {navigationLinks.map((item, index) => {
                     let className = index===0 ? 'nav-item active' : 'nav-item'
                     return (
-                        <li className={className}>
+                        <li className={className} key={item.text}>
                             <NavLink className='nav-link' to={item.href}
                             activeClassName="selected"
                             activeStyle={{
@@ -74,12 +79,12 @@ export default class Navbar extends React.Component {
         return (
             // <-- Navbar -->
             <nav className='navbar navbar-expand-sm fixed-top navbar-con'>
-                {this.renderIndianFlag()}
+                {this.renderFlags()}
                 {this.renderOrganizationHeader()}
                 {/* {this.renderOrganizationPic()} */}
 
                 {/* <-- Collapse button --> */}
-                <button type="button" class="navbar-toggler"
+                <button type="button" className="navbar-toggler"
                         data-toggle="collapse" 
                         data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent"
@@ -90,10 +95,10 @@ export default class Navbar extends React.Component {
                 </button>
 
                 {/* <-- Collapsible content --> */}
-                <div class="collapse navbar-collapse nav-links-con" id="navbarSupportedContent">
+                <div className="collapse navbar-collapse nav-links-con" id="navbarSupportedContent">
 
                 {/* <-- Links --> */}
-                    <ul class="navbar-nav">
+                    <ul className="navbar-nav">
                         {this.renderLinks()}
                         <li className='nav-item'>
                             {renderFaceBookPage()}

@@ -42,7 +42,7 @@ export default class ContactUs extends React.Component {
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.8891627210132!2d-77.22056428519547!3d38.90364985418164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64b1f9d08b623%3A0x2871f00e51e7889!2s2118+Tysons+Executive+Ct%2C+Dunn+Loring%2C+VA+22027%2C+USA!5e0!3m2!1sen!2sin!4v1545671338286"
                     frameborder={0}
                     className='shadow-sm w-100 w-100 h-100'
-                    allowfullscreen
+                    allowfullScreen
                     title='gmap'></iframe>
             </div>
         )

@@ -8,7 +8,7 @@ export const emailValidation = (email) => {
 
 export const renderFaceBookPage=()=>{
     return(
-        <div className='facebook-con' title='Connect on facebook'>
+        <div className='facebook-con' title='Visit our facebook page'>
             <a href='https://www.facebook.com/gopiova/'
                 className=''
                 target='_blank' rel='noopener noreferrer'>

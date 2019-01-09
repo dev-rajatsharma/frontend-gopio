@@ -1,0 +1,12 @@
+
+.carousel{
+    max-height: 20rem;
+    min-height: 20rem;
+    margin: auto;
+}
+.carousel-inner{
+    max-height: 20rem;
+}
+.carousel-caption-text{
+    background-color: darkslateblue;
+}

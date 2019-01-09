@@ -50,3 +50,6 @@
     margin: 0.3rem;
     cursor: pointer;
 }
+.carousel-con{
+    background-image: url('../../../../img/home/textures/white-waves.png');
+}

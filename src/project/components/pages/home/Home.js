@@ -167,7 +167,9 @@ export default class Home extends React.Component {
     renderMiddleColumn = () => {
         return (
             <div className='m-3 middle-con'>
-                <Corousel />
+                <div className='carousel-con'>
+                    <Corousel />
+                </div>
                 <div className='d-flex'>
                     {this.renderGopioVirginiaIntro()}
                     {this.renderChairmanPic()}

@@ -1,11 +1,11 @@
 import React,{Component} from 'react';
 import './carousel.css';
 import pic1 from '../../../../img/home/carousel/pic1.jpeg';
-import pic2 from '../../../../img/home/carousel/pic2.jpeg';
-import pic3 from '../../../../img/home/carousel/pic3.jpeg';
+import pic2 from '../../../../img/home/carousel/pic2.jpg';
+import pic3 from '../../../../img/home/carousel/pic3.jpg';
 import pic4 from '../../../../img/home/carousel/pic4.jpeg';
 import pic5 from '../../../../img/home/carousel/pic5.jpeg';
-import pic6 from '../../../../img/home/carousel/pic6.jpeg';
+import pic6 from '../../../../img/home/carousel/pic6.jpg';
 import pic7 from '../../../../img/home/carousel/pic7.jpg';
 import pic8 from '../../../../img/home/carousel/pic8.jpg';
 import pic9 from '../../../../img/home/carousel/pic9.jpg';

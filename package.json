@@ -18,7 +18,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "https://github.com/dev-rajatsharma/frontend-gopio",
+  "homepage": "https://www.gopiovirginia.com",
   "browserslist": [
     ">0.2%",
     "not dead",

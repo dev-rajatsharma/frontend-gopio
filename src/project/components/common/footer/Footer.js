@@ -9,7 +9,7 @@ export default class Footer extends React.Component{
                 GOPIO - All rights reserved.
                 </div>
                 <div>
-                    maintained by- Deepika Kothari
+                    {/* maintained by- Deepika Kothari */}
                 </div>
             </footer>
         )

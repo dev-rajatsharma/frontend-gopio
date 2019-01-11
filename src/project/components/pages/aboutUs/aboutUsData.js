@@ -26,7 +26,7 @@ export const governingMembers = [
         designation: 'Founder & President',
     },
     {
-        name: 'Swati Jain',
+        name: 'Shweta Jain',
         designation: 'Vice President'
     },
     {
@@ -42,7 +42,7 @@ export const governingMembers = [
         designation: 'Treasurer'
     },
     {
-        name: ['Puneet Jain', ' Sant Gupta', ' Allen', ' Krishnan', ' Vinita Tiwari', ' Swati Sharma'],
+        name: [' Nilima Mehra', ' Puneet Jain', ' Dr. Surya Dhakar', ' Sant Gupta', ' Allen', ' Krishnan', ' Vinita Tiwari', ' Swati Sharma'],
         designation: 'Board of Directors'
     }
 ]

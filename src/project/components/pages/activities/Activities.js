@@ -47,14 +47,18 @@ export default class Activities extends React.Component {
             <div className='border p-2'>
             <h4 className='text-danger'>10th Annual Award Gala Function</h4>
             <h6>Second largest event</h6>                 
-                We are inviting nominations in the following categories :-
+                6 Indians who achieve extraordinary recognition in the fields of :-
                 <ol>
-                    <li>Community Service</li>
-                    <li>Journalism</li>
                     <li>Science & Technology</li>
+                    <li>Entrepreneurship  & Innovation</li>
+                    <li>Education & Research</li>
+                    <li>Journalism</li>
+                    <li>Community Service</li>
+                    <li>Arts & Culture</li>
                     <li>Medicine</li>
                 </ol>
-                <p>More details coming soon!</p>
+                will be awarded by top US officials
+                <p><b>More details coming soon!</b></p>
             </div>
         )
     }

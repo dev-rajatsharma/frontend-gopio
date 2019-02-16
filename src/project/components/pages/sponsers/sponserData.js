@@ -1,40 +1,42 @@
 
 export const sponserData = [
     {
-        sponserType: 'Platinum sponsers benefits',
+        sponserType: 'Platinum sponsers benefits (USD 5000)',
         benefits: [
-            'Color advertisement on cover page in souvenir',
-            '1 banner on Annual Gala',
+            'Cover page color advertisement in souvenir',
+            'One banner of your enterprise / business in events',
             'Advertisement on website and social media',
-            'complimentary VIP seatings for 2 people in Annual Gala',
-            'Meet and greet with Guest Honor',
-            '2 min speech',
-            'Name announcement during annual gala'
+            'Complimentary VIP seating for four people',
+            'Meet & greet and picture with Honorable Guests',
+            '2-minute speech',
+            'Acknowledgment in annual gala event'
         ]
     },
     {
-        sponserType: 'Gold sponsers benefits',
+        sponserType: 'Gold sponsers benefits (USD 2500)',
         benefits: [
-            '1 color page advertisement in souvenir',
+            'One-page color advertisement in souvenir',
             'Logo on website and social media',
-            'complimentary VIP seatings for 2 people in Annual Gala',
-            'Name announcement during annual gala'
+            'Complimentary VIP seating for two people',
+            'Meet & greet and picture with Honorable Guests',
+            'Acknowledgment in annual gala event'
         ]
     },
     {
-        sponserType: 'Silver sponser benefits',
+        sponserType: 'Silver sponser benefits (USD 1500)',
         benefits: [
-            'complimentary priority seatings for 2 people in Annual Gala',
-            '1 B/W page advertisement in souvenir',
+            'Complimentary priority seating for two people',
+            'One-page color advertisement in souvenir',
             'Logo on website and social media',
+            'Acknowledgment in annual gala event'
         ]
     },
     {
-        sponserType: 'Bronze sponser benefits',
+        sponserType: 'Bronze sponser benefits (USD 750)',
         benefits: [
-            'complimentary priority seatings for 2 people in Annual Gala',
-            '1 B/W page advertisement in souvenir',
-            'Name announcement during annual gala'
+            'Complimentary priority seating for two people',
+            'One-page advertisement',
+            'Acknowledgment in annual gala event'
         ]
     }
 ]

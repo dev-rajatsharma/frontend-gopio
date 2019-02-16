@@ -22,7 +22,7 @@ import pic20 from '../../../../img/gallery/20.jpg';
 import pic21 from '../../../../img/gallery/21.jpg';
 import pic22 from '../../../../img/gallery/22.jpg';
 import pic23 from '../../../../img/gallery/23.jpg';
-import pic24 from '../../../../img/gallery/jagat_shah.jpeg';
+// import pic24 from '../../../../img/gallery/jagat_shah.jpeg';
 import pic25 from '../../../../img/gallery/June2018Event_with Jagat Shah.jpeg';
 
 import './gallery.css';
@@ -119,10 +119,10 @@ import './gallery.css';
         src: pic23,
         caption: ''
     },
-    {
-        src: pic24,
-        caption: ''
-    },
+    // {
+    //     src: pic24,
+    //     caption: ''
+    // },
     {
         src: pic25,
         caption: ''

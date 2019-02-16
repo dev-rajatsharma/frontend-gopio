@@ -3,7 +3,7 @@ import './home.css';
 import banarasEventPic from '../../../../img/activities/banarasEventPic.jpg';
 import chairman1 from '../../../../img/home/chairman1_cropped.jpeg';
 import { emailValidation } from '../../../utils';
-import membershipForm from '../../../../img/home/Gopio_Membership_Form.pdf';
+import membershipForm from '../../../../img/home/Gopio_Membership_Form_8Feb2019_v2.pdf';
 import logo from '../../../../img/logo2.jpeg';
 import newYear1 from '../../../../img/events/newYear1.jpeg';
 import newYear2 from '../../../../img/home/newyear2.jpeg';
@@ -46,11 +46,16 @@ export default class Home extends React.Component {
         return (
             <section className='w-100'>
                 {/* <p> */}
-                GOPIO International, as non partisan and a political entities brings together the Indian DIASPORA spread around the world for the betterment of the community to remind that the world is a big family as we say “VASUDEVA KUTUMBAKAM”.
-                GOPIO, International was founded in New York in 1989. In June, 2010 GOPIO has commenced a chapter in Virginia under the leadership of Mr.Jay Singh Bhandari.
-                GOPIO Virginia was inagrurated on a cruise in the water's of the Potomac River. It was a full moon night and members enjoyed a 3 hour ride on a boat with a concert from Munni Begam, well-known Gazal singer. The very first year our membership grew to 65 members.
-                GOPIO, aims to bring people of Indian Origin in the World together to promote their professional, cultural and social interests with a view to realizing their maximum potential in the service of Global peace, prosperity, happiness and compassion.
-
+                GOPIO, as a non-partisan organization, brings together the Indian DIASPORA spread
+around the world for the betterment of the community to remind that the world is one
+family as we say “VASUDEVA KUTUMBAKAM”. GOPIO was founded in New York in
+1989. In June 2010, GOPIO commenced a chapter in Virginia under the leadership of
+Mr. Jay Singh Bhandari. GOPIO Virginia was inaugurated in style on a cruise in the
+waters of the Potomac River. It was a full moon night and members enjoyed a non-stop
+3-hour musical night by famous gazal singer Munni Begam on a motor boat. GOPIO
+aims to bring People of Indian Origin in the World together to promote their professional,
+cultural and social interests with a perspective of realizing their maximum potential in
+the service of global peace, prosperity, happiness and compassion.
                 {/* </p> */}
 
             </section>
@@ -182,7 +187,11 @@ export default class Home extends React.Component {
                     {this.renderChairmanPic()}
                 </div>
                 <p>
-                    The initial thrust of GOPIO was fighting human rights violation of people of Indian origin. Although this has been improved in the last one decade, human rights violations continue to be a major issue for PIOs living outside India. GOPIO has now set its priorities in pooling our resources, both financial and professional, for the benefit of PIOs, the countries they come from and India.
+                The initial thrust of GOPIO was to fight against human rights violation on behalf of
+                people of Indian origin. Although this has been improved in the last one-decade, human
+                rights violations continue to be a major issue for PIOs living outside India. GOPIO has
+                also included in its priorities to pool resources, both financial and professional, for the
+                benefit of PIOs, their respective countries and India.
                 </p>
                 <div className='d-flex'>
                     {this.renderMembershipBox()}
@@ -199,15 +208,13 @@ export default class Home extends React.Component {
         return (
             <div className='right-con'>
                 <h5 className='text-center' style={{ 'color': this.state.eventsHeading }}> Upcoming Events! </h5>
-                <div className='my-3'>
-                <figure className='m-0'>
-                    <a href='https://pbdindia.gov.in/en' target='_blank' rel='noopener noreferrer'>
-                        <img src={banarasEventPic} className='img-responsive img-thumbnail' alt='Banaras Event 2019' />
-                    </a>
-                </figure>
-                {/* <small>Pravasiya Bhartiya Diwas</small> */}
-
-                </div>
+                {/* <div className='my-3'>
+                    <figure className='m-0'>
+                        <a href='https://pbdindia.gov.in/en' target='_blank' rel='noopener noreferrer'>
+                            <img src={banarasEventPic} className='img-responsive img-thumbnail' alt='Banaras Event 2019' />
+                        </a>
+                    </figure>
+                </div> */}
                 <div className='my-3'>
                     <figure className='m-0'>
                         <img src={march2019} className='img-responsive img-thumbnail' alt='march 2019' onClick={this.openPoster}/>

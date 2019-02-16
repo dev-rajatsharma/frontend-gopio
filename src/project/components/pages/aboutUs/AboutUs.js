@@ -12,7 +12,9 @@ export default class AboutUs extends React.Component {
                         <div>
                             <h4 className='text-center'>Our Vision</h4>
                             <p>
-                                GOPIO, aims to bring people of Indian Origin in the World together to promote their professional, cultural and social interests with a view to realizing their maximum potential in the service of Global peace, prosperity, happiness and compassion
+                            GOPIO aims to bring People of Indian Origin together to promote their professional,
+cultural and social interests with a view of realizing their maximum potential in the
+service of Global peace, prosperity, happiness and compassion.
                     </p>
                         </div>
                         <div>

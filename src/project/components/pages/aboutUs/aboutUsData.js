@@ -22,7 +22,7 @@ export const memberStats = [
 ]
 export const governingMembers = [
     {
-        name: 'Mr. Jay Bhandari',
+        name: 'Jay Bhandari',
         designation: 'Founder & President',
     },
     {
@@ -30,7 +30,7 @@ export const governingMembers = [
         designation: 'Vice President'
     },
     {
-        name: 'Dr. Shruti Agarwal',
+        name: 'Shruti Agarwal',
         designation: 'Secretary'
     },
     {
@@ -42,7 +42,7 @@ export const governingMembers = [
         designation: 'Treasurer'
     },
     {
-        name: [' Nilima Mehra', ' Puneet Jain', ' Dr. Surya Dhakar', ' Sant Gupta', ' Allen', ' Krishnan', ' Vinita Tiwari', ' Swati Sharma'],
+        name: [' Nilima Mehra', ' Puneet Jain', ' Surya Dhakar', ' Sant Gupta', ' Allen Krishnan', ' Vinita Tiwari', ' Swati Sharma', ' Elizabeth John', ' Dheeraj Agarwal'],
         designation: 'Board of Directors'
     }
 ]

@@ -2,7 +2,7 @@ import React from 'react';
 import { navigationLinks } from './navbarData';
 import { Link,NavLink } from 'react-router-dom';
 import './navbar.css';
-import flag from '../../../../img/indian flags/flag4.svg';
+import flag from '../../../../img/indian flags/indianFlag20.jpeg';
 import USflag from '../../../../img/home/USflag.png';
 // import facebook_logo from '../../../../img/home/facebook_logo.png';
 // import { FacebookIcon } from 'react-share';

@@ -2,6 +2,7 @@ import React from 'react';
 import { boxes, workWithUs } from './activitiesData';
 import './activities.css';
 import teamwork from '../../../../img/activities/tab.jpg';
+import {Container,Row,Col, Image} from 'react-bootstrap';
 
 const colors = ['#e74c3c', '#7dbb18', '#00cccc', '#ffcc00'];
 
@@ -18,33 +19,46 @@ export default class Activities extends React.Component {
     }
     renderCollaboratePic = () => {
         return (
-            <figure>
-                <img src={teamwork} className='w-100' alt='teamwork' />
-            </figure>
+            <Col md={5}>
+                {/* <figure>
+                    <img src={teamwork} className='w-100' alt='teamwork' />
+                </figure> */}
+                <Image src={teamwork} thumbnail  style={{border:'none'}}/>
+            </Col>
         )
     }
     renderWorkWithUs = () => {
         return (
-            <div className=''>
+            // <div className=''>
+            <Col md={7}>
                 <h3>Why work with us </h3>
-                {this.renderWorkWithUsContent()}
-            </div>
-        )
-    }
-    renderWorkWithUsContent = () => {
-        return (
-            <ul>
+                {/* {this.renderWorkWithUsContent()} */}
+                <ul>
                 {workWithUs.map((item, index) => {
                     return (
                         <li>{item.text}</li>
                     )
                 })}
             </ul>
+            </Col>
+            // </div>
         )
     }
+    // renderWorkWithUsContent = () => {
+    //     return (
+    //         <ul>
+    //             {workWithUs.map((item, index) => {
+    //                 return (
+    //                     <li>{item.text}</li>
+    //                 )
+    //             })}
+    //         </ul>
+    //     )
+    // }
     renderGalaEvent=()=>{
         return(
-            <div className='border p-2'>
+            <Row>
+                <Col>
             <h4 className='text-danger'>10th Annual Award Gala Function</h4>
             <h6>Second largest event</h6>                 
                 6 Indians who achieve extraordinary recognition in the fields of :-
@@ -59,42 +73,66 @@ export default class Activities extends React.Component {
                 </ol>
                 will be awarded by top US officials
                 <p><b>More details coming soon!</b></p>
-            </div>
+            </Col>
+            </Row>
         )
     }
-    renderBoxes = () => {
+    // renderBoxes = () => {
+    //     return (
+    //         boxes.map((item, index) => {
+    //             let specificColor = colors[index]
+    //             let borderStyle = {
+    //                 'borderColor': specificColor,
+    //                 'border-style': 'solid',
+    //                 'border-width': '0.3px'                
+    //             }
+    //             return (
+    //                 // <div className='mx-3'>
+    //                     // <div className='p-3' style={borderStyle}>
+    //                     <Col style={borderStyle}>
+    //                         <div className='text-center'>
+    //                             <i className={item.icon}></i>
+    //                         </div>
+    //                         <h3 style={{ 'color': specificColor }}>{item.heading}</h3>
+    //                         <div>{item.content}</div>
+    //                     </Col>
+    //                     // </div>
+    //                 // </div>
+    //             )
+    //         })
+    //     )
+    // }
+    renderActivityBoxes = () => {
         return (
-            boxes.map((item, index) => {
+            <Row>
+            {boxes.map((item, index) => {
                 let specificColor = colors[index]
                 let borderStyle = {
                     'borderColor': specificColor,
                     'border-style': 'solid',
-                    'border-width': '0.3px'
+                    'border-width': '0.3px',
+                    'margin': '0.3rem 0'
                 }
                 return (
-                    <div className='mx-3'>
-                        <div className='p-3' style={borderStyle}>
+                        <Col style={borderStyle} md={3}>
                             <div className='text-center'>
                                 <i className={item.icon}></i>
                             </div>
                             <h3 style={{ 'color': specificColor }}>{item.heading}</h3>
                             <div>{item.content}</div>
-                        </div>
-                    </div>
+                        </Col>
                 )
-            })
-        )
-    }
-    renderActivityBoxes = () => {
-        return (
-            <div className='d-flex'>
-                {this.renderBoxes()}
-            </div>
+                    
+            })}
+            </Row>
         )
     }
     render() {
         return (
-            <main className='d-flex flex-column w-100 h-100 activities-main-con'>
+            // <main className='flex-column w-100 h-100 activities-main-con'>
+            <Container>
+                <Row>
+
                 {/* <div
                     className="fb-page"
                     data-href="https://www.facebook.com/gopiova/"
@@ -111,13 +149,15 @@ export default class Activities extends React.Component {
                 {/* <a href='https://pbdindia.gov.in/en' target='_blank'>
                     <img src={banarasEventPic} alt='Banaras Event 2019' />
                 </a> */}
-                <div className='d-flex'>
+                {/* <div className='d-flex'> */}
                     {this.renderCollaboratePic()}
                     {this.renderWorkWithUs()}
-                    {this.renderGalaEvent()}
-                </div>
+                {/* </div> */}
+                </Row>
                 {this.renderActivityBoxes()}
-            </main>
+                {this.renderGalaEvent()}
+            </Container>
+            // </main>
         )
     }
 }

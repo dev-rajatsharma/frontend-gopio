@@ -1,4 +1,4 @@
-
+//commmon functions placed in one file
 import React from 'react';
 import {FacebookIcon} from 'react-share';
 

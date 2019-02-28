@@ -2,6 +2,7 @@ import React from 'react';
 import { emailValidation } from '../../../utils';
 import './contactUs.css';
 import { contactDetails } from './contactUsData';
+import {Container,Row,Col} from 'react-bootstrap';
 
 export default class ContactUs extends React.Component {
     constructor(props) {
@@ -14,6 +15,8 @@ export default class ContactUs extends React.Component {
     }
     renderContactDetails = () => {
         return (
+            <Col style={{margin:'1rem'}}>
+                            <h4> Contact Details</h4>
             <table className='shadow-sm'>
                 {/* <thead>
                     <tr>
@@ -33,23 +36,28 @@ export default class ContactUs extends React.Component {
                     })}
                 </tbody>
             </table>
+            </Col>
         )
     }
     renderMap = () => {
         return (
-            <div className='m-4 map-con'>
-            <h4>Locate Us on Map</h4>
+            // <div className='m-4 map-con'>
+            <Col style={{margin:'1rem'}}>
+                <h4>Locate Us on Map</h4>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.8891627210132!2d-77.22056428519547!3d38.90364985418164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64b1f9d08b623%3A0x2871f00e51e7889!2s2118+Tysons+Executive+Ct%2C+Dunn+Loring%2C+VA+22027%2C+USA!5e0!3m2!1sen!2sin!4v1545671338286"
                     frameborder={0}
                     className='shadow-sm w-100 w-100 h-100'
                     allowfullScreen
-                    title='gmap'></iframe>
-            </div>
+                    title='gmap'>
+                </iframe>
+            </Col>
+            // </div>
         )
     }
     renderfeedBackForm = () => {
         return (
-            <section className='rounded p-4 contact-form'>
+            // <section className='rounded p-4 contact-form'>
+            <Col style={{margin:'2rem'}}>
                 <h4>Connect With Us</h4>
                 <form onSubmit={this.handleSubmit}>
                     <div className='form-group'>
@@ -63,7 +71,7 @@ export default class ContactUs extends React.Component {
                     </div>
                     <input type='submit' className='btn btn-info' value='Send Message' />
                 </form>
-            </section>
+            </Col>
         )
     }
     handleChange = (e) => {
@@ -84,16 +92,15 @@ export default class ContactUs extends React.Component {
     }
     render() {
         return (
-            <main className='d-flex  flex-column w-100 h-100 contact-main-con'>
-                <div className='d-flex'>
-                    <div className='p-4 contact-table'>
-                        <h4> Contact Details</h4>
-                        {this.renderContactDetails()}
-                    </div>
+            <Container>
+                <Row>
+                    {this.renderContactDetails()}
                     {this.renderMap()}
-                </div>
-                {this.renderfeedBackForm()}
-            </main>
+                </Row>
+                <Row>
+                    {this.renderfeedBackForm()}
+                </Row>
+            </Container>
         )
     }
 }

@@ -3,14 +3,14 @@ import './home.css';
 import banarasEventPic from '../../../../img/activities/banarasEventPic.jpg';
 import chairman1 from '../../../../img/home/chairman1_cropped.jpeg';
 import { emailValidation } from '../../../utils';
-import membershipForm from '../../../../img/home/Gopio_Membership_Form_8Feb2019_v2.pdf';
+import membershipForm from '../../../../img/home/Gopio_Membership_Form.pdf';
 import logo from '../../../../img/logo2.jpeg';
 import newYear1 from '../../../../img/events/newYear1.jpeg';
 import newYear2 from '../../../../img/home/newyear2.jpeg';
 import march2019 from '../../../../img/home/marchevent2.jpeg';
 import { Link } from 'react-router-dom';
 // import nancyPelosi1 from '../../../../img/home/nancyPelosi1.jpeg';
-import Corousel from '../../common/corousel/Corousel';
+import ControlledCarousel from '../../common/corousel/ControlledCarousel';
 import {
     FacebookShareButton,
     TwitterShareButton,
@@ -23,13 +23,18 @@ import {
     WhatsappIcon,
     GooglePlusIcon,
     LinkedinIcon} from 'react-share';
+import { Container, Row, Col, Image, Figure  } from 'react-bootstrap';
+import VerticallyCenteredModal from '../../common/modal/VerticallyCenteredModal';
+
 
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             email: '',
-            eventsHeading: 'red'
+            eventsHeading: 'red',
+            modalShow: false,
+            modalPic: {}
         }
     }
     componentDidMount = () => {
@@ -40,6 +45,15 @@ export default class Home extends React.Component {
                 this.setState({ eventsHeading: 'red' })
             }
         }, 500)
+    }
+    
+    modalOpen = (e, pic, caption) =>{
+        this.setState({
+            modalPic:{'src':pic, 'caption':caption},
+            modalShow: true})
+    }
+    modalClose = () =>{
+        this.setState({ modalShow: false})
     }
     
     renderGopioVirginiaIntro = () => {
@@ -156,13 +170,16 @@ the service of global peace, prosperity, happiness and compassion.
     // }
     renderLeftColumn = () => {
         return (
-            <div className='left-con'>
-                <div className='my-1'>
+            // <div className='left-con'>
+            <Col sm={2} md={2}>
+                {/* <div className='my-1'>
                     <img src={logo} className='img-responsive logo-img' alt='GOPIO Logo' onClick={this.handleClickLogo} />
-                </div>
-                <div className='my-2'>
+                </div> */}
+                <Image src={logo} thumbnail onClick={(e)=>this.modalOpen(e,logo)}/>
+                {/* <div className='my-2'>
                     <img src={newYear1} className='img-responsive img-thumbnail' alt='newyear' onClick={this.openPoster}/>
-                </div>
+                </div> */}
+                <Image src={newYear1} thumbnail onClick={(e)=>this.modalOpen(e,newYear1)}/>
                 {/* <div className='my-2'>
                     <figure className='m-0'>
                         <img src={nancyPelosi1} className='img-responsive img-thumbnail' alt='Text' onClick={this.openPoster}/>
@@ -173,14 +190,15 @@ the service of global peace, prosperity, happiness and compassion.
                 <div className='border my-3 p-1'>
                     GOPIO International Chamber of Commerce (GICC) Is Coming Soon!
                 </div>
-            </div>
+            </Col>
         )
     }
     renderMiddleColumn = () => {
         return (
-            <div className='m-3 middle-con'>
+            // <div className='m-3 middle-con'>
+            <Col sm={8} md={8}>
                 <div className='carousel-con'>
-                    <Corousel />
+                    <ControlledCarousel />
                 </div>
                 <div className='d-flex'>
                     {this.renderGopioVirginiaIntro()}
@@ -201,12 +219,12 @@ the service of global peace, prosperity, happiness and compassion.
                 {this.renderSocialIcons()}
                 {/* {this.renderDonationBox()} */}
                 </div>
-            </div>
+            </Col>
         )
     }
     renderRightColumn = () => {
         return (
-            <div className='right-con'>
+            <Col >
                 <h5 className='text-center' style={{ 'color': this.state.eventsHeading }}> Upcoming Events! </h5>
                 {/* <div className='my-3'>
                     <figure className='m-0'>
@@ -215,12 +233,13 @@ the service of global peace, prosperity, happiness and compassion.
                         </a>
                     </figure>
                 </div> */}
-                <div className='my-3'>
+                {/* <div className='my-3'>
                     <figure className='m-0'>
                         <img src={march2019} className='img-responsive img-thumbnail' alt='march 2019' onClick={this.openPoster}/>
                     </figure>
                     <small>College scholarship for brilliant students</small>
-                </div>
+                </div> */}
+                <Image src={march2019} thumbnail onClick={(e)=>this.modalOpen(e,march2019)}/>
                 <div className='border my-3 p-1'>
                 <h6>10th Annual Award Gala Function</h6>
                 <p>
@@ -230,17 +249,23 @@ the service of global peace, prosperity, happiness and compassion.
                     </button>
                 </p> 
                 </div>
-            </div>
+                </Col>
         )
     }
     
     render() {
+        let {modalShow, modalPic} = this.state
         return (
-            <main className='d-flex w-100 h-100 homepage-main-con'>
-                {this.renderLeftColumn()}
-                {this.renderMiddleColumn()}
-                {this.renderRightColumn()}
-            </main>
+            // <main className=' w-100 h-100 homepage-main-con'>
+            <Container>
+                <Row>
+                    {this.renderLeftColumn()}
+                    {this.renderMiddleColumn()}
+                    {this.renderRightColumn()}
+                </Row>
+                <VerticallyCenteredModal show={modalShow} onHide={this.modalClose} pic={modalPic}/>
+            </Container>
+            // </main>
         )
     }
 }

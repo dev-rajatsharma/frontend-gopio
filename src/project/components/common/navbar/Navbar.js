@@ -4,8 +4,6 @@ import { Link,NavLink } from 'react-router-dom';
 import './navbar.css';
 import flag from '../../../../img/indian flags/indianFlag20.jpeg';
 import USflag from '../../../../img/home/USflag.png';
-// import facebook_logo from '../../../../img/home/facebook_logo.png';
-// import { FacebookIcon } from 'react-share';
 import {renderFaceBookPage} from '../../../utils';
     
 
@@ -31,13 +29,7 @@ export default class Navbar extends React.Component {
             </span>
         )
     }
-    // renderOrganizationPic=()=>{
-    //     return(
-    //         <figure className='org-pic-con'>
-    //             <img src={} className='img-responsive w-100 h-100' alt='gopio board'/>
-    //         </figure>
-    //     )
-    // }
+    
     renderLinks = () => {
         return (
             <React.Fragment>
@@ -61,52 +53,40 @@ export default class Navbar extends React.Component {
     handleClickLogo = () => {
         // this.props.history.loca
     }
-    // renderFaceBookPage=()=>{
-    //     return(
-    //         <div className='facebook-con' title='Connect on facebook'>
-    //             <a href='https://www.facebook.com/gopiova/'
-    //                 className=''
-    //                 target='_blank' rel='noopener noreferrer'>
-    //                 <FacebookIcon size={32} round={true} />
-    //                     {/* <img src={facebook_logo} className='img-responsive rounded-circle w-100 h-100' alt='facebook' /> */}
-    //             </a>
-    //         </div>
-    //     )
-    // }
-    
     
     render() {
         return (
             // <-- Navbar -->
-            <nav className='navbar navbar-expand-sm fixed-top navbar-con'>
-                {this.renderFlags()}
-                {this.renderOrganizationHeader()}
-                {/* {this.renderOrganizationPic()} */}
+            <nav className='navbar navbar-expand-md fixed-top bg-dark'>
+                    {this.renderFlags()}
+                    {this.renderOrganizationHeader()}
+                    {/* {this.renderOrganizationPic()} */}
 
-                {/* <-- Collapse button --> */}
-                <button type="button" className="navbar-toggler"
-                        data-toggle="collapse" 
-                        data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+                    {/* <-- Collapse button --> */}
+                    <button type="button"
+                            className="navbar-toggler"
+                            data-toggle="collapse" 
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
 
-                {/* <-- Collapsible content --> */}
-                <div className="collapse navbar-collapse nav-links-con" id="navbarSupportedContent">
+                    {/* <-- Collapsible content --> */}
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
-                {/* <-- Links --> */}
-                    <ul className="navbar-nav">
-                        {this.renderLinks()}
-                        <li className='nav-item'>
-                            {renderFaceBookPage()}
-                        </li>
-                    </ul>
-                    {/* <-- /. Links --> */}
-                </div>
-                {/* <-- /. Collapsible content --> */}
+                    {/* <-- Links --> */}
+                        <ul className="navbar-nav ml-auto">
+                            {this.renderLinks()}
+                            <li className='nav-item'>
+                                {renderFaceBookPage()}
+                            </li>
+                        </ul>
+                        {/* <-- /. Links --> */}
+                    </div>
+                    {/* <-- /. Collapsible content --> */}
             </nav>
             // <--/. Navbar -->
         )

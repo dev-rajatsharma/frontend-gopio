@@ -24,7 +24,8 @@ import pic22 from '../../../../img/gallery/22.jpg';
 import pic23 from '../../../../img/gallery/23.jpg';
 // import pic24 from '../../../../img/gallery/jagat_shah.jpeg';
 import pic25 from '../../../../img/gallery/June2018Event_with Jagat Shah.jpeg';
-
+import VerticallyCenteredModal from '../../common/modal/VerticallyCenteredModal';
+import {Image} from 'react-bootstrap';
 import './gallery.css';
  let pics = [
      {
@@ -130,20 +131,36 @@ import './gallery.css';
     
  ]
 
-export default class gallery extends React.Component {
+export default class Gallery extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            modalShow: false,
+            modalPic: {}
+        }
+    }
     openPoster=(e)=>{
         console.log(e.target.src)
         window.open(e.target.src)
     }
+    modalOpen = (e, pic, caption) =>{
+        this.setState({
+            modalPic:{'src':pic, 'caption':caption},
+            modalShow: true})
+    }
+    modalClose = () =>{
+        this.setState({ modalShow: false})
+    }
     renderPics=()=>{
         return pics.map((item,index)=>{
             return (
-                <figure className='border m-0 gallery-fig-con'>
-                    <img src={item.src} className='img img-thumbnail img-responsive' alt='pic' onClick={this.openPoster}/>
-                    <div className='text-center'>
-                        <small>{item.caption}</small>
-                    </div>
-                </figure>
+                // <figure className='border m-0 gallery-fig-con'>
+                //     <img src={item.src} className='img img-thumbnail img-responsive' alt='pic' onClick={this.openPoster}/>
+                //     <div className='text-center'>
+                //         <small>{item.caption}</small>
+                //     </div>
+                // </figure>
+                <Image src={item.src} thumbnail onClick={(e)=>this.modalOpen(e,item.src)} />
             )
         })
     }
@@ -196,12 +213,14 @@ export default class gallery extends React.Component {
     //     )
     // }
     render() {
+        let {modalShow, modalPic} = this.state
         return (
             <main className='shadow'>
             <h4 className='container'>A glimpse of international events at GOPIO-Virginia</h4>
                 <div className='d-flex flex-wrap'>
                     {this.renderPics()}
                 </div>
+                <VerticallyCenteredModal show={modalShow} onHide={this.modalClose} pic={modalPic}/>
             </main>
         )
     }

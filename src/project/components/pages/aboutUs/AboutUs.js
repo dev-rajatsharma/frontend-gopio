@@ -1,6 +1,7 @@
 import React from 'react';
 import { memberStats, governingMembers } from './aboutUsData';
 import './aboutUs.css';
+import {Container, Row, Col} from 'react-bootstrap';
 
 const colors = ['#e74c3c', '#7dbb18', '#00cccc', '#ffcc00']
 
@@ -8,16 +9,17 @@ export default class AboutUs extends React.Component {
     
     renderVisionMission=()=>{
         return(
-            <section className='w-50 m-3'>
-                        <div>
+            // <section className='w-50 m-3'>
+            <Row>
+            <Col sm={8} md={6}>
                             <h4 className='text-center'>Our Vision</h4>
                             <p>
                             GOPIO aims to bring People of Indian Origin together to promote their professional,
 cultural and social interests with a view of realizing their maximum potential in the
 service of Global peace, prosperity, happiness and compassion.
                     </p>
-                        </div>
-                        <div>
+                        </Col>
+                        <Col>
                             <h4 className='text-center'>Our Mission</h4>
                             <p>
                                 - To empower, educate and enhance community awareness.
@@ -31,8 +33,8 @@ service of Global peace, prosperity, happiness and compassion.
                             <p >
                                 - To significantly contribute towards building strong relations between India and USA towards economical, educational and social progress.
 				</p>
-                        </div>
-                    </section>
+                    </Col>
+                    </Row>
         )
     }
     renderMemberSection=()=>{
@@ -73,35 +75,40 @@ service of Global peace, prosperity, happiness and compassion.
     }
     renderMembersTable = () => {
         return (
-            <div className='py-3'>
-            <h4 className='text-center'>GOPIO Governing Body</h4>
-            <table className='table table-hover shadow-sm w-100'>
-                <tbody>
-                    {governingMembers.map((item, index) => {
-                        let designation = item.designation;
-                        let name = (typeof item.name === 'string')? item.name: item.name.join();
-                        return (
-                            <tr>
-                                <th className='p-2'>{designation}</th>
-                                <td className='p-2'>{name}</td>
-                            </tr>
-                        )
-                    })}
-                </tbody>
-            </table>
-            </div>
+            // <div className='py-3'>
+            <Row>
+                <Col>
+                <h4 className='text-center'>GOPIO Governing Body</h4>
+                <table className='table table-hover shadow-sm w-100'>
+                    <tbody>
+                        {governingMembers.map((item, index) => {
+                            let designation = item.designation;
+                            let name = (typeof item.name === 'string')? item.name: item.name.join();
+                            return (
+                                <tr>
+                                    <th className='p-2'>{designation}</th>
+                                    <td className='p-2'>{name}</td>
+                                </tr>
+                            )
+                        })}
+                    </tbody>
+                </table>
+                </Col>
+            </Row>
         )
     }
     render() {
         return (
-            <main className='d-flex w-100 h-100 about-main-con'>
-                {this.renderVisionMission()}
-                <section className=''>
+            // <main className='w-100 h-100 about-main-con'>
+            <Container>
+                {/* <section className=''> */}
                     {this.renderMembersTable()}
                     {/* DO NOT DELETE THE LINE BELOW, IT WILL BE ACTIVATED LATER */}
                     {/* {this.renderBoxes()} */} 
-                </section>
-            </main>
+                {/* </section> */}
+                    {this.renderVisionMission()}
+            </Container>
+            // </main>
         )
     }
 }

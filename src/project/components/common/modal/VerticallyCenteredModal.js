@@ -1,5 +1,6 @@
 import React from 'react';
 import {Modal, Button, Image} from 'react-bootstrap';
+import './modal.css';
 
 export default class VerticallyCenteredModal extends React.Component {
     render() {

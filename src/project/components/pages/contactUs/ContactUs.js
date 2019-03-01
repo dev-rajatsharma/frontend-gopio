@@ -1,5 +1,5 @@
 import React from 'react';
-import { emailValidation } from '../../../utils';
+import { emailValidation, nameValidation } from '../../../utils';
 import './contactUs.css';
 import { contactDetails } from './contactUsData';
 import {Container,Row,Col} from 'react-bootstrap';
@@ -61,13 +61,13 @@ export default class ContactUs extends React.Component {
                 <h4>Connect With Us</h4>
                 <form onSubmit={this.handleSubmit}>
                     <div className='form-group'>
-                        <input type='text' className='form-control' value={this.state.name} name='name' placeholder='Enter name' onChange={this.handleChange}/>
+                        <input type='text' className='form-control' value={this.state.name} name='name' placeholder='Enter Firstname lastname' onChange={this.handleChange} required/>
                     </div>
                     <div className='form-group'>
-                        <input type='email' className='form-control' value={this.state.email} name='email' placeholder='Enter Email' onChange={this.handleChange}/>
+                        <input type='email' className='form-control' value={this.state.email} name='email' placeholder='Enter Email' onChange={this.handleChange} required/>
                     </div>
                     <div className='form-group'>
-                        <textarea type='text' className='form-control' value={this.state.message} name='message' placeholder='Enter Message' onChange={this.handleChange}/>
+                        <textarea type='text' className='form-control' value={this.state.message} name='message' placeholder='Enter Message' onChange={this.handleChange} required/>
                     </div>
                     <input type='submit' className='btn btn-info' value='Send Message' />
                 </form>
@@ -81,14 +81,26 @@ export default class ContactUs extends React.Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        if (emailValidation(this.state.email)) {
+        if (!this.contactFormValidation()) {
+            alert('please verify the details and try again')
+        } else {
             alert('message submitted')
             this.setState({
                 name:'',
                 email:'',
                 message:''
             })
-        } else alert('please verify the email and try again')
+    }
+}
+    contactFormValidation=()=>{
+        let {name, email, message} = this.state
+        if(!(name && nameValidation(name.trim()))){
+            return false
+        }else if(!(email && emailValidation(email))){
+            return false
+        }else if(!message) {
+            return false
+        } else return true
     }
     render() {
         return (

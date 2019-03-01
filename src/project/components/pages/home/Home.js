@@ -56,26 +56,26 @@ export default class Home extends React.Component {
         this.setState({ modalShow: false})
     }
     
-    renderGopioVirginiaIntro = () => {
-        return (
-            <section className='w-100'>
-                {/* <p> */}
-                GOPIO, as a non-partisan organization, brings together the Indian DIASPORA spread
-around the world for the betterment of the community to remind that the world is one
-family as we say “VASUDEVA KUTUMBAKAM”. GOPIO was founded in New York in
-1989. In June 2010, GOPIO commenced a chapter in Virginia under the leadership of
-Mr. Jay Singh Bhandari. GOPIO Virginia was inaugurated in style on a cruise in the
-waters of the Potomac River. It was a full moon night and members enjoyed a non-stop
-3-hour musical night by famous gazal singer Munni Begam on a motor boat. GOPIO
-aims to bring People of Indian Origin in the World together to promote their professional,
-cultural and social interests with a perspective of realizing their maximum potential in
-the service of global peace, prosperity, happiness and compassion.
-                {/* </p> */}
+//     renderGopioVirginiaIntro = () => {
+//         return (
+//             <section className='w-100'>
+//                 {/* <p> */}
+//                 GOPIO, as a non-partisan organization, brings together the Indian DIASPORA spread
+// around the world for the betterment of the community to remind that the world is one
+// family as we say “VASUDEVA KUTUMBAKAM”. GOPIO was founded in New York in
+// 1989. In June 2010, GOPIO commenced a chapter in Virginia under the leadership of
+// Mr. Jay Singh Bhandari. GOPIO Virginia was inaugurated in style on a cruise in the
+// waters of the Potomac River. It was a full moon night and members enjoyed a non-stop
+// 3-hour musical night by famous gazal singer Munni Begam on a motor boat. GOPIO
+// aims to bring People of Indian Origin in the World together to promote their professional,
+// cultural and social interests with a perspective of realizing their maximum potential in
+// the service of global peace, prosperity, happiness and compassion.
+//                 {/* </p> */}
 
-            </section>
-        )
+//             </section>
+//         )
 
-    }
+//     }
     renderChairmanPic = () => {
         return (
             <figure className='w-25 mx-3'>
@@ -96,7 +96,7 @@ the service of global peace, prosperity, happiness and compassion.
                 <div className='form-group'>
                     <label htmlFor='subscriberEmail' className='text-danger'> Subscribe to GOPIO newsletter below  </label>
                     <input type='email' id='subscriberEmail' className='form-control'
-                        placeholder='Enter email here...'
+                        placeholder='Email'
                         value={this.state.email} required
                         onChange={this.handleChangeEmail} />
                 </div>
@@ -172,24 +172,9 @@ the service of global peace, prosperity, happiness and compassion.
         return (
             // <div className='left-con'>
             <Col sm={2} md={2}>
-                {/* <div className='my-1'>
-                    <img src={logo} className='img-responsive logo-img' alt='GOPIO Logo' onClick={this.handleClickLogo} />
-                </div> */}
-                <Image src={logo} thumbnail onClick={(e)=>this.modalOpen(e,logo)}/>
-                {/* <div className='my-2'>
-                    <img src={newYear1} className='img-responsive img-thumbnail' alt='newyear' onClick={this.openPoster}/>
-                </div> */}
-                <Image src={newYear1} thumbnail onClick={(e)=>this.modalOpen(e,newYear1)}/>
-                {/* <div className='my-2'>
-                    <figure className='m-0'>
-                        <img src={nancyPelosi1} className='img-responsive img-thumbnail' alt='Text' onClick={this.openPoster}/>
-                    </figure>
-                    <small>Parliament Speaker Nancy Pelosi</small>
-                </div> */}
-                
-                <div className='border my-3 p-1'>
-                    GOPIO International Chamber of Commerce (GICC) Is Coming Soon!
-                </div>
+                    {/* {this.renderChairmanPic()} */}
+                    <Image src={chairman1} thumbnail onClick={(e)=>this.modalOpen(e,chairman1)}/>
+                    <p>Founder & President, Gopio Virginia</p>
             </Col>
         )
     }
@@ -200,11 +185,18 @@ the service of global peace, prosperity, happiness and compassion.
                 <div className='carousel-con'>
                     <ControlledCarousel />
                 </div>
-                <div className='d-flex'>
-                    {this.renderGopioVirginiaIntro()}
-                    {this.renderChairmanPic()}
-                </div>
-                <p>
+                    {/* {this.renderGopioVirginiaIntro()} */}
+                <p className='justify-content-center'>
+                GOPIO, as a non-partisan organization, brings together the Indian DIASPORA spread
+around the world for the betterment of the community to remind that the world is one
+family as we say “VASUDEVA KUTUMBAKAM”. GOPIO was founded in New York in
+1989. In June 2010, GOPIO commenced a chapter in Virginia under the leadership of
+Mr. Jay Singh Bhandari. GOPIO Virginia was inaugurated in style on a cruise in the
+waters of the Potomac River. It was a full moon night and members enjoyed a non-stop
+3-hour musical night by famous gazal singer Munni Begam on a motor boat. GOPIO
+aims to bring People of Indian Origin in the World together to promote their professional,
+cultural and social interests with a perspective of realizing their maximum potential in
+the service of global peace, prosperity, happiness and compassion.
                 The initial thrust of GOPIO was to fight against human rights violation on behalf of
                 people of Indian origin. Although this has been improved in the last one-decade, human
                 rights violations continue to be a major issue for PIOs living outside India. GOPIO has

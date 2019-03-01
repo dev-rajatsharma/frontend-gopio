@@ -217,7 +217,7 @@ export default class Gallery extends React.Component {
         return (
             <main className='shadow'>
             <h4 className='container'>A glimpse of international events at GOPIO-Virginia</h4>
-                <div className='d-flex flex-wrap'>
+                <div >
                     {this.renderPics()}
                 </div>
                 <VerticallyCenteredModal show={modalShow} onHide={this.modalClose} pic={modalPic}/>

@@ -13,6 +13,6 @@ export const contactDetails = [
     {
         title: 'Email',
         class: "fa fa-envelope fa-2x",
-        value: 'gopiovirginia@gmail.com'
+        value: 'gopiovirginia1@gmail.com'
     }
 ]
